@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" android:layout_marginTop="150dp">
+
+    <EditText
+        android:id="@+id/flashcardFrontTextInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="300dp"
+        android:hint="@string/front_of_flashcard" />
+
+    <EditText
+        android:id="@+id/flashCardBackTextInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/back_of_flashcard"
+        android:layout_below="@id/flashcardFrontTextInput"
+        android:width="300dp"/>
+    
+    <Button
+        android:id="@+id/addFlashCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_below="@id/flashCardBackTextInput"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
