@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="150dp"
     tools:context=".CreateDeckActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/deckNameTextEdit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:width="300dp"
+        android:hint="@string/type_deck_name_here"
+        />
+
+    <EditText
+        android:id="@+id/deckSubjectTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="300dp"
+        android:layout_marginTop="15dp"
+        android:hint="Type deck subject here"
+        android:layout_below="@id/deckNameTextEdit" />
+
+    <Button
+        android:id="@+id/createDeckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_deck"
+        android:layout_below="@id/deckSubjectTextEdit"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
