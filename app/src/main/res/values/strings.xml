@@ -3,4 +3,16 @@
     <string name="create_deck">Create Deck</string>
     <string name="collections">Deck Collections</string>
     <string name="duel">Duel</string>
+    <string name="type_deck_name_here">Type deck name here</string>
+    <string name="back_of_flashcard">back of flashcard</string>
+    <string name="front_of_flashcard">front of flashcard</string>
+    <string name="add">Add</string>
+    <string name="add_flashcard">Add FlashCard</string>
+    <string name="deck_info_text_view">Total:   \nPercent Correct:   \nDifficulty:</string>
+    <string name="study">Study</string>
+    <string name="add_new_flashcard">Add New Flashcard</string>
+    <string name="answer">Answer</string>
+    <string name="easy_button">easy</string>
+    <string name="correct_button">correct</string>
+    <string name="hard_button">hard</string>
 </resources>
