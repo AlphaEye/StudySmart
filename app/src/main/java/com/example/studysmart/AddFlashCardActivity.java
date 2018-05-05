@@ -1,28 +1,27 @@
 package com.example.studysmart;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CreateDeckActivity extends AppCompatActivity {
+public class AddFlashCardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_deck);
+        setContentView(R.layout.activity_add_flashcard);
 
-        Button createDeckButton = findViewById(R.id.createDeckButton);
+        Button addFlashCardButton = findViewById(R.id.addFlashCardButton);
 
         // event handling
-        createDeckButton.setOnClickListener(
+        addFlashCardButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        // code for creating decks go here
-                        // text in text views need to be retrieved first
+                        // code to create and add flashcard to deck goes here
                     }
                 }
         );
+
     }
 }

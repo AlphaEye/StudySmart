@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateDeckActivity"></activity>
+        <activity android:name=".CreateDeckActivity" />
+        <activity android:name=".StudyActivity" />
+        <activity android:name=".AddFlashCardActivity" />
+        <activity android:name=".DeckDetailsActivity" />
     </application>
 
 </manifest>
