@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateDeckActivity" />
-        <activity android:name=".ViewCollectionActivity"></activity>
+        <activity android:name=".ViewCollectionActivity" />
+        <activity android:name=".DeckCollectionActivity"></activity>
     </application>
 
 </manifest>

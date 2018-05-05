@@ -17,4 +17,5 @@
     <string name="hard_button">hard</string>
     <string name="add_deck">Add Deck</string>
     <string name="main_menu">Main Menu</string>
+    <string name="deck_confirm">Confirm Deck</string>
 </resources>

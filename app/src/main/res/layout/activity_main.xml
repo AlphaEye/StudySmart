@@ -27,6 +27,7 @@
         android:layout_width="261dp"
         android:layout_height="112dp"
         android:background="@android:drawable/alert_light_frame"
+        android:onClick="collection"
         android:text="@string/collections"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
