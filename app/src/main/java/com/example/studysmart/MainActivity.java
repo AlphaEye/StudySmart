@@ -19,4 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreateDeckActivity.class);
         startActivity(intent);
     }
+
+    public void collection(View view)
+    {
+        Intent intent = new Intent(this, ViewCollectionActivity.class);
+        startActivity(intent);
+    }
 }

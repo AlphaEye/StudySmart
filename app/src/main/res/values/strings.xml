@@ -15,4 +15,6 @@
     <string name="easy_button">easy</string>
     <string name="correct_button">correct</string>
     <string name="hard_button">hard</string>
+    <string name="add_deck">Add Deck</string>
+    <string name="main_menu">Main Menu</string>
 </resources>
