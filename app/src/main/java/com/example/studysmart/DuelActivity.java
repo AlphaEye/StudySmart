@@ -1,8 +1,3 @@
-/*
-// I'm currently working on this.
-// This code may be commented out at times, so that the rest of the app runs.
-// - Aidan
-
 package com.example.studysmart;
 
 import android.content.Intent;
@@ -20,6 +15,4 @@ public class DuelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_duel);
 
     }
-
 }
-*/

@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
     public static Vector<Deck> deckList;
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
-    //Current card number, used to implement view deck(AlphaEye)
-    public static int currentCardNO;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        /*
-            THESE ACTIVITIES CURRENTLY DON'T EXIST
+
+
+        Button duelButton = findViewById(R.id.duelButton);
 
         duelButton.setOnClickListener(
                 new Button.OnClickListener() {
@@ -55,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+
+    /*
+    THESE ACTIVITIES CURRENTLY DON'T EXIST
 
         deckCollectionButton.setOnClickListener(
                 new Button.OnClickListener() {
@@ -87,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
     public void collection(View view)
     {
         Intent intent = new Intent(this, ViewCollectionActivity.class);
+        startActivity(intent);
+    }
+
+    public void duel(View view)
+    {
+        Intent intent = new Intent(this, DuelActivity.class);
         startActivity(intent);
     }
 }
