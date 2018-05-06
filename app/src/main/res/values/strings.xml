@@ -18,4 +18,16 @@
     <string name="add_deck">Add Deck</string>
     <string name="main_menu">Main Menu</string>
     <string name="deck_confirm">Confirm Deck</string>
+    <string name="rename_deck">Rename Deck</string>
+    <string name="view_deck">View Deck</string>
+    <string name="rename_message">Enter a New Name for Deck</string>
+    <string name="rename_confirm">Confirm</string>
+    <string name="add_image">Add Image</string>
+    <string name="remove_image">Remove Image</string>
+    <string name="back_to_deck">Deck</string>
+    <string name="easy_difficulty">Easy</string>
+    <string name="hard_difficulty">Hard</string>
+    <string name="medium_difficulty">Medium</string>
+    <string name="next_card">Next</string>
+    <string name="remove_card">Remove Card</string>
 </resources>

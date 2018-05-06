@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     public static Vector<Deck> deckList;
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
+    //Current card number, used to implement view deck(AlphaEye)
+    public static int currentCardNO;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
     @Override
     protected void onCreate(Bundle savedInstanceState) {

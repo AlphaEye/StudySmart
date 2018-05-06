@@ -18,10 +18,13 @@
         </activity>
         <activity android:name=".CreateDeckActivity" />
         <activity android:name=".ViewCollectionActivity" />
-        <activity android:name=".DeckCollectionActivity"></activity>
+        <activity android:name=".DeckCollectionActivity" />
         <activity android:name=".StudyActivity" />
         <activity android:name=".AddFlashCardActivity" />
         <activity android:name=".DeckDetailsActivity" />
+        <activity android:name=".RenameDeckActivity" />
+        <activity android:name=".ViewDeckActivity" />
+        <activity android:name=".AnswerCardActivity"></activity>
     </application>
 
 </manifest>
