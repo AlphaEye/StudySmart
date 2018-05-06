@@ -19,6 +19,7 @@
         <activity android:name=".CreateDeckActivity" />
         <activity android:name=".ViewCollectionActivity" />
         <activity android:name=".DeckCollectionActivity" />
+        <activity android:name=".DuelActivity" />
         <activity android:name=".StudyActivity" />
         <activity android:name=".AddFlashCardActivity" />
         <activity android:name=".DeckDetailsActivity" />
