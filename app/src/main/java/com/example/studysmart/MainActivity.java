@@ -1,12 +1,18 @@
 package com.example.studysmart;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import java.lang.reflect.Type;
 import java.util.Vector;
 import android.widget.Button;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 //import android.widget.EditText; never used
 
 public class MainActivity extends AppCompatActivity {
@@ -17,14 +23,23 @@ public class MainActivity extends AppCompatActivity {
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
+<<<<<<< HEAD
+=======
+    //Actually needed for viewing cards
+    public static int currentCardNO;
+>>>>>>> ee63cb5c3df54632a923727534c2c5c531c00348
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        loadData();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //For testing (AlphaEye)
         deckList = new Vector<Deck>();
         deckList.add(new Deck("Deck1", "SUBJECT"));
-
+        deckList.elementAt(0).addCard(new Card("TEST1", "ANSWER1"));
+        deckList.elementAt(0).addCard(new Card("TEST2", "ANSWER2"));
+        deckList.elementAt(0).addCard(new Card("TEST3", "ANSWER3"));
         Button createDeckButton = findViewById(R.id.createDeckButton);
         // Leave the collection to me(AlphaEye)
 //        Button deckCollectionButton = findViewById(R.id.deckCollectionButton);
@@ -42,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
 
 
 
@@ -80,6 +96,35 @@ public class MainActivity extends AppCompatActivity {
                 }
         );*/
 
+    }
+
+    //method to save user defined decks
+    private void saveData()
+    {
+        //we save user data to shared preferences
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",
+                MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(deckList);
+        editor.putString("deck list", json);
+        //this is what saves the deckList to memory
+        editor.apply();
+    }
+
+    private void loadData()
+    {
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",
+                MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("deck list", null);
+        Type type = new TypeToken<Vector<Deck>>() {}.getType();
+        deckList = gson.fromJson(json, type);
+
+        if (deckList == null)
+        {
+            deckList = new Vector<Deck>();
+        }
     }
 
     /** Called when the user taps the button */

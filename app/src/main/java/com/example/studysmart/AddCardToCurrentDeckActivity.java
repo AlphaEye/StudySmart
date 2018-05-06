@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import static com.example.studysmart.MainActivity.selectedDeck;
@@ -23,6 +24,13 @@ public class AddCardToCurrentDeckActivity extends AppCompatActivity {
         String front = frontEditText.getText().toString();
         EditText backEditText = (EditText) findViewById(R.id.flashCardBackTextInput);
         String back = backEditText.getText().toString();
+        selectedDeck.addCard(new Card(front, back));
+        startActivity(intent);
+    }
+
+    public void cancelAddCard(View view)
+    {
+        Intent intent = new Intent(this, DeckCollectionActivity.class);
         startActivity(intent);
     }
 }

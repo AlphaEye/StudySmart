@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static com.example.studysmart.MainActivity.currentCardNO;
 import static com.example.studysmart.MainActivity.selectedDeck;
 
 public class DeckCollectionActivity extends AppCompatActivity {
@@ -17,6 +18,8 @@ public class DeckCollectionActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.cardNameText);
         textView.setText(selectedDeck.getName());
+
+        currentCardNO = 0;
     }
 
     public void renameDeck(View view)
