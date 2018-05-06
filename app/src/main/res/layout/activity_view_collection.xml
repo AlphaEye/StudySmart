@@ -23,6 +23,7 @@
         android:layout_width="148dp"
         android:layout_height="72dp"
         android:layout_marginTop="16dp"
+        android:onClick="addDeck"
         android:text="@string/add_deck"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

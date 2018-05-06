@@ -28,4 +28,11 @@ public class ViewDeckActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AnswerCardActivity.class);
         startActivity(intent);
     }
+
+    public void deleteCard(View view)
+    {
+        Intent intent = new Intent(this, ViewDeckActivity.class);
+
+        startActivity(intent);
+    }
 }

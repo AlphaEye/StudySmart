@@ -30,4 +30,5 @@
     <string name="medium_difficulty">Medium</string>
     <string name="next_card">Next</string>
     <string name="remove_card">Remove Card</string>
+    <string name="cancel_add_card">Cancel</string>
 </resources>

@@ -58,6 +58,12 @@ public class ViewCollectionActivity extends AppCompatActivity implements Adapter
 
     }
 
+    public void addDeck(View view)
+    {
+        Intent intent = new Intent(this, CreateDeckActivity.class);
+        startActivity(intent);
+    }
+
     public void backToMainMenu(View view)
     {
         Intent intent = new Intent(this, MainActivity.class);

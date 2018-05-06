@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import static com.example.studysmart.MainActivity.currentCardNO;
 import static com.example.studysmart.MainActivity.selectedDeck;
 
 public class DeckCollectionActivity extends AppCompatActivity {
@@ -15,7 +14,6 @@ public class DeckCollectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deck_collection);
-        currentCardNO = 0;
 
         TextView textView = findViewById(R.id.cardNameText);
         textView.setText(selectedDeck.getName());
@@ -30,6 +28,18 @@ public class DeckCollectionActivity extends AppCompatActivity {
     public void viewDeck(View view)
     {
         Intent intent = new Intent(this, ViewDeckActivity.class);
+        startActivity(intent);
+    }
+
+    public void returnToMainMenu(View view)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void addCard(View view)
+    {
+        Intent intent = new Intent(this, AddCardToCurrentDeckActivity.class);
         startActivity(intent);
     }
 }

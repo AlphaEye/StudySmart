@@ -7,30 +7,46 @@
     tools:context=".DeckCollectionActivity">
 
     <Button
+        android:id="@+id/addCardButton"
+        android:layout_width="213dp"
+        android:layout_height="97dp"
+        android:onClick="addCard"
+        android:text="@string/add_flashcard"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <Button
         android:id="@+id/viewDeckButton"
-        android:layout_width="232dp"
-        android:layout_height="115dp"
+        android:layout_width="213dp"
+        android:layout_height="97dp"
         android:onClick="viewDeck"
         android:text="@string/view_deck"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <Button
         android:id="@+id/renameButton"
-        android:layout_width="232dp"
-        android:layout_height="115dp"
+        android:layout_width="213dp"
+        android:layout_height="97dp"
         android:onClick="renameDeck"
         android:text="@string/rename_deck"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintVertical_bias="0.198" />
 
     <TextView
         android:id="@+id/cardNameText"
@@ -38,9 +54,25 @@
         android:layout_height="51dp"
         android:text="TextView"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.034" />
+
+    <Button
+        android:id="@+id/mainMenuButton"
+        android:layout_width="124dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="returnToMainMenu"
+        android:text="@string/main_menu"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
 </android.support.constraint.ConstraintLayout>

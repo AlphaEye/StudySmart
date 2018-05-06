@@ -25,7 +25,8 @@
         <activity android:name=".DeckDetailsActivity" />
         <activity android:name=".RenameDeckActivity" />
         <activity android:name=".ViewDeckActivity" />
-        <activity android:name=".AnswerCardActivity"></activity>
+        <activity android:name=".AnswerCardActivity" />
+        <activity android:name=".AddCardToCurrentDeckActivity"></activity>
     </application>
 
 </manifest>
