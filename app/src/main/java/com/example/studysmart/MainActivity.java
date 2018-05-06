@@ -23,17 +23,8 @@ public class MainActivity extends AppCompatActivity {
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     //Actually needed for viewing cards
     public static int currentCardNO;
->>>>>>> ee63cb5c3df54632a923727534c2c5c531c00348
-=======
-    //Actually needed for viewing cards
-    public static int currentCardNO;
->>>>>>> ee63cb5c3df54632a923727534c2c5c531c00348
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadData();
