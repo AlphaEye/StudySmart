@@ -10,6 +10,7 @@
         android:id="@+id/mediumButton"
         android:layout_width="120dp"
         android:layout_height="78dp"
+        android:onClick="addMedium"
         android:text="@string/medium_difficulty"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,6 +51,7 @@
         android:id="@+id/hardButton"
         android:layout_width="120dp"
         android:layout_height="78dp"
+        android:onClick="addHard"
         android:text="@string/hard_difficulty"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,6 +65,7 @@
         android:id="@+id/easyButton"
         android:layout_width="120dp"
         android:layout_height="78dp"
+        android:onClick="addEasy"
         android:text="@string/easy_difficulty"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,10 +80,13 @@
         android:layout_width="294dp"
         android:layout_height="62dp"
         android:text="TextView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.078" />
+
 </android.support.constraint.ConstraintLayout>

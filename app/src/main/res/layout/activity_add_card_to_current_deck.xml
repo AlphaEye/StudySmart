@@ -10,22 +10,30 @@
         android:id="@+id/flashcardFrontTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:width="300dp"
         android:hint="@string/front_of_flashcard"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="131dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
 
     <EditText
-        android:id="@+id/flashCardBackTextInput2"
+        android:id="@+id/flashCardBackTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/flashcardFrontTextInput"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:width="300dp"
         android:hint="@string/back_of_flashcard"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="217dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
 
     <Button
         android:id="@+id/cancelButton"
@@ -33,10 +41,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/flashCardBackTextInput"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="cancelAddCard"
         android:text="@string/cancel_add_card"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="404dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
 
     <Button
         android:id="@+id/addFlashCardButton3"
@@ -44,8 +57,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/flashCardBackTextInput"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="addCard"
         android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693" />
 </android.support.constraint.ConstraintLayout>

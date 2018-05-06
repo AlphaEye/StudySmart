@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
+    //Actually needed for viewing cards
+    public static int currentCardNO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         //For testing (AlphaEye)
         deckList = new Vector<Deck>();
         deckList.add(new Deck("Deck1", "SUBJECT"));
-
+        deckList.elementAt(0).addCard(new Card("TEST1", "ANSWER1"));
+        deckList.elementAt(0).addCard(new Card("TEST2", "ANSWER2"));
+        deckList.elementAt(0).addCard(new Card("TEST3", "ANSWER3"));
         Button createDeckButton = findViewById(R.id.createDeckButton);
         // Leave the collection to me(AlphaEye)
 //        Button deckCollectionButton = findViewById(R.id.deckCollectionButton);
