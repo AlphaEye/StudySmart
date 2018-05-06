@@ -4,32 +4,30 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< HEAD
 import android.widget.EditText;
 import java.util.Vector;
-
-public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE";
-
-    public static Vector<Deck> deckList;
-    public static Deck selectedDeck;
-=======
 import android.widget.Button;
 //import android.widget.EditText; never used
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE";
+
+    //For list of deck, should be loaded from the phone(AlphaEye)
+    public static Vector<Deck> deckList;
+    //Selected deck, used to implement deck collections(AlphaEye)
+    public static Deck selectedDeck;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
->>>>>>> origin/devel
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
+        //For testing (AlphaEye)
         deckList = new Vector<Deck>();
         deckList.add(new Deck("Deck1", "SUBJECT"));
-=======
+
         Button createDeckButton = findViewById(R.id.createDeckButton);
-        Button deckCollectionButton = findViewById(R.id.deckCollectionButton);
+        // Leave the collection to me(AlphaEye)
+//        Button deckCollectionButton = findViewById(R.id.deckCollectionButton);
         // NEED DECK DETAILS FROM DECK CLASS TO ADD TO TEXT VIEW
         // ...
 
@@ -67,16 +65,15 @@ public class MainActivity extends AppCompatActivity {
         */
 
         // temporary code
-
+/*
         deckCollectionButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         startActivity(new Intent(MainActivity.this, DeckDetailsActivity.class));
                     }
                 }
-        );
+        );*/
 
->>>>>>> origin/devel
     }
 
     /** Called when the user taps the button */

@@ -57,4 +57,10 @@ public class ViewCollectionActivity extends AppCompatActivity implements Adapter
     public void onNothingSelected(AdapterView<?> arg0) {
 
     }
+
+    public void backToMainMenu(View view)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

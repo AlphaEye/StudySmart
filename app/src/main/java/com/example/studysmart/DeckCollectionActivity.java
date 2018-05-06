@@ -1,7 +1,9 @@
 package com.example.studysmart;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class DeckCollectionActivity extends AppCompatActivity {
 
@@ -9,5 +11,11 @@ public class DeckCollectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deck_collection);
+    }
+
+    public void renameDeck(View view)
+    {
+ //       Intent intent = new Intent(this, RenameDeckActivity.class);
+ //       startActivity(intent);
     }
 }

@@ -17,14 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateDeckActivity" />
-<<<<<<< HEAD
         <activity android:name=".ViewCollectionActivity" />
         <activity android:name=".DeckCollectionActivity"></activity>
-=======
         <activity android:name=".StudyActivity" />
         <activity android:name=".AddFlashCardActivity" />
         <activity android:name=".DeckDetailsActivity" />
->>>>>>> origin/devel
     </application>
 
 </manifest>
