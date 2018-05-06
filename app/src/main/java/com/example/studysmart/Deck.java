@@ -1,5 +1,7 @@
 package com.example.studysmart;
 
+import android.content.SharedPreferences;
+
 import java.util.Random;
 import java.util.Vector;
 
@@ -9,6 +11,9 @@ public class Deck {
     //when cards are first added, they go into the unseen vector
     Vector<Card> unseen_v;
 
+    //used to keep track of cards in order. Is never used except to display the cards
+    Vector<Card> inOrder_v;
+
     //the three difficulty arrays
     Vector<Card> easy_v;
     Vector<Card> medium_v;
@@ -16,16 +21,21 @@ public class Deck {
 
     String name;
     String subject;
-    int size;
+
+    int totalSize;
+
+
+
 
     //constructor
     public Deck(String n, String s)
     {
         this.name = n;
         this.subject = s;
-        this.size = 0;
+        this.totalSize = 0;
 
         this.unseen_v = new Vector<Card>();
+        this.inOrder_v = new Vector<Card>();
         this.easy_v = new Vector<Card>();
         this.medium_v = new Vector<Card>();
         this.hard_v = new Vector<Card>();
@@ -49,6 +59,55 @@ public class Deck {
     public void setSubject(String s)
     {
         subject = s;
+    }
+
+    //saves instance of the deck. may need to put in activity file or somewhere else
+    public void saveDeck()
+    {
+
+    }
+
+
+    public void addCard(Card card)
+    {
+        this.unseen_v.addElement(card);
+        this.inOrder_v.addElement(card);
+        this.totalSize++;
+
+        //save this deck to file
+        saveDeck();
+    }
+
+    //if user says card was easy
+    public void addCardToEasy(Card card) { this.easy_v.addElement(card); }
+
+    //if user says card was medium
+    public void addCardToMedium(Card card) { this.medium_v.addElement(card); }
+
+    //if user says card was hard
+    public void addCardToHard(Card card) { this.hard_v.addElement(card); }
+
+    public void viewCardsInOrder()
+    {
+        for (Card card : inOrder_v)
+        {
+            System.out.println(card.question);
+        }
+    }
+
+    public void removeCard(Card card)
+    {
+        //will need to check all 4 vectors (unseen, easy, medium, hard) to look for card to delete
+        this.unseen_v.removeElement(card);
+        this.inOrder_v.removeElement(card);
+        this.easy_v.removeElement(card);
+        this.medium_v.removeElement(card);
+        this.hard_v.removeElement(card);
+
+        this.totalSize--;
+
+        //save this deck to file
+        saveDeck();
     }
 
 
