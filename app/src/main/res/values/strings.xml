@@ -4,8 +4,8 @@
     <string name="collections">Deck Collections</string>
     <string name="duel">Duel</string>
     <string name="type_deck_name_here">Type deck name here</string>
-    <string name="back_of_flashcard">back of flashcard</string>
-    <string name="front_of_flashcard">front of flashcard</string>
+    <string name="back_of_flashcard">Answer</string>
+    <string name="front_of_flashcard">Question</string>
     <string name="add">Add</string>
     <string name="add_flashcard">Add FlashCard</string>
     <string name="deck_info_text_view">Total:   \nPercent Correct:   \nDifficulty:</string>

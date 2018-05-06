@@ -28,7 +28,7 @@ public class ViewCollectionActivity extends AppCompatActivity implements Adapter
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
 
-        //Deck Seletions
+        //Deck Selections
         List<String> deckNames = new ArrayList<String>();
         deckNames.add("");
         for (int i = 0; i < deckList.size(); i++)

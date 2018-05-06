@@ -29,9 +29,10 @@
         android:id="@+id/createDeckButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_deck"
         android:layout_below="@id/deckSubjectTextEdit"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true"/>
+        android:onClick="createNewDeck"
+        android:text="@string/create_deck" />
 
 </RelativeLayout>
