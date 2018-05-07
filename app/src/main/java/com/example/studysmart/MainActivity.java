@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE";
 
     //For list of deck, should be loaded from the phone(AlphaEye)
-    public static Vector<Deck> deckList;
+    public static Vector<Deck> deckList = new Vector<Deck>();
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
@@ -31,11 +31,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //For testing (AlphaEye)
-        deckList = new Vector<Deck>();
+        //deckList = new Vector<Deck>();
         deckList.add(new Deck("Deck1", "SUBJECT"));
         deckList.elementAt(0).addCard(new Card("TEST1", "ANSWER1"));
         deckList.elementAt(0).addCard(new Card("TEST2", "ANSWER2"));
         deckList.elementAt(0).addCard(new Card("TEST3", "ANSWER3"));
+        deckList.add(new Deck("CS410", "Comp Sci"));
+        deckList.elementAt(1).addCard(new Card("Water", "H2O"));
         Button createDeckButton = findViewById(R.id.createDeckButton);
         // Leave the collection to me(AlphaEye)
 //        Button deckCollectionButton = findViewById(R.id.deckCollectionButton);
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //method to save user defined decks
-    private void saveData()
+    public void saveData()
     {
         //we save user data to shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",
@@ -108,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    private void loadData()
+    public void loadData()
     {
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",
                 MODE_PRIVATE);
