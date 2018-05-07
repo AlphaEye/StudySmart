@@ -33,7 +33,19 @@ public class MainActivity extends AppCompatActivity {
         //For testing (AlphaEye)
         //deckList = new Vector<Deck>();
 
-        /*deckList.add(new Deck("Deck1", "SUBJECT"));
+        /*deckList.add(new Deck("CS410", "Comp Sci"));
+        for (int i = 0; i <= 33; i++)
+        {
+            deckList.elementAt(0).addCardToEasy(new Card("Easy Q" + Integer.toString(i), "Easy A" + Integer.toString(i)));
+        }
+        for (int i = 34; i <= 66; i++)
+        {
+            deckList.elementAt(0).addCardToMedium(new Card("Medium Q" + Integer.toString(i), "Medium A" + Integer.toString(i)));
+        }
+        for (int i = 67; i <= 100; i++)
+        {
+            deckList.elementAt(0).addCardToHard(new Card("Hard Q" + Integer.toString(i), "Hard A" + Integer.toString(i)));
+        }
         deckList.elementAt(0).addCard(new Card("TEST1", "ANSWER1"));
         deckList.elementAt(0).addCard(new Card("TEST2", "ANSWER2"));
         deckList.elementAt(0).addCard(new Card("TEST3", "ANSWER3"));

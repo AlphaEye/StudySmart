@@ -33,7 +33,7 @@ public class ViewCollectionActivity extends AppCompatActivity implements Adapter
         deckNames.add("");
         for (int i = 0; i < deckList.size(); i++)
         {
-            deckNames.add(deckList.elementAt(i).getName());
+            deckNames.add(deckList.elementAt(i).getName() + "     " + deckList.elementAt(i).getSubject());
         }
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, deckNames);
