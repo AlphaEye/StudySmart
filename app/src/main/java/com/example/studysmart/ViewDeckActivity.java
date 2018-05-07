@@ -29,6 +29,7 @@ public class ViewDeckActivity extends AppCompatActivity {
     private static int RESULT_LOAD_IMAGE = 1;
 
     Card currentCard;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadData();
@@ -41,23 +42,35 @@ public class ViewDeckActivity extends AppCompatActivity {
         //get the question string
         TextView questionText = (TextView) findViewById(R.id.questionText);
         questionText.setText(currentCard.getQuestion());
+
+        ImageView image_view = (ImageView) findViewById(R.id.imageView);
+        if(currentCard.questionImage != null)
+        {
+
+            image_view.setImageBitmap(currentCard.questionImage);
+        }
+
     }
 
     //for loading images
     @Override
     protected void onActivityResult(int reqCode, int resultCode, Intent data) {
+        loadData();
         super.onActivityResult(reqCode, resultCode, data);
 
-        ImageView image_view = (ImageView) findViewById(R.id.imageView);
+
         if (resultCode == RESULT_OK) {
             try {
+                ImageView image_view = (ImageView) findViewById(R.id.imageView);
                 final Uri imageUri = data.getData();
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                 currentCard.setQuestionImage(selectedImage);
                 image_view.setImageBitmap(currentCard.questionImage);
+                //save that image to the card
                 saveData();
-                } catch (FileNotFoundException e) {
+                }
+                catch (FileNotFoundException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
                 }
