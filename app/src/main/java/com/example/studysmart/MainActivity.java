@@ -32,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //For testing (AlphaEye)
         //deckList = new Vector<Deck>();
-        deckList.add(new Deck("Deck1", "SUBJECT"));
+
+        /*deckList.add(new Deck("Deck1", "SUBJECT"));
         deckList.elementAt(0).addCard(new Card("TEST1", "ANSWER1"));
         deckList.elementAt(0).addCard(new Card("TEST2", "ANSWER2"));
         deckList.elementAt(0).addCard(new Card("TEST3", "ANSWER3"));
         deckList.add(new Deck("CS410", "Comp Sci"));
-        deckList.elementAt(1).addCard(new Card("Water", "H2O"));
+        deckList.elementAt(1).addCard(new Card("Water", "H2O"));*/
+
         Button createDeckButton = findViewById(R.id.createDeckButton);
         // Leave the collection to me(AlphaEye)
 //        Button deckCollectionButton = findViewById(R.id.deckCollectionButton);
