@@ -60,42 +60,42 @@ public class Card
 
     String getQuestion()
     {
-        return question;
+        return this.question;
     }
 
     String getAnswer()
     {
-        return answer;
+        return this.answer;
     }
 
     Bitmap getQuestionImage()
     {
-        return questionImage;
+        return this.questionImage;
     }
 
     Bitmap getAnswerImage()
     {
-        return answerImage;
+        return this.answerImage;
     }
 
     void setQuestion(String q)
     {
-        question = q;
+        this.question = q;
     }
 
     void setAnswer(String a)
     {
-        answer = a;
+        this.answer = a;
     }
 
     void setQuestionImage(Bitmap qi)
     {
-        questionImage = qi;
+        this.questionImage = qi;
     }
 
     void setAnswerImage(Bitmap ai)
     {
-        answerImage = ai;
+        this.answerImage = ai;
     }
 
 }

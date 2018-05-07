@@ -52,6 +52,7 @@
         android:id="@+id/addImageButton2"
         android:layout_width="120dp"
         android:layout_height="78dp"
+        android:onClick="addImage"
         android:text="@string/add_image"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,4 +87,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.061" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="204dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/addImageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/removeButton"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="?attr/actionModeBackground" />
 </android.support.constraint.ConstraintLayout>
