@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
     //Actually needed for viewing cards
     public static int currentCardNO;
+    //Boolean used to determine where the card viewing was directed from
+    public static boolean fromStudy = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadData();

@@ -23,6 +23,7 @@ import java.util.Vector;
 
 import static com.example.studysmart.MainActivity.currentCardNO;
 import static com.example.studysmart.MainActivity.deckList;
+import static com.example.studysmart.MainActivity.fromStudy;
 import static com.example.studysmart.MainActivity.selectedDeck;
 
 public class ViewDeckActivity extends AppCompatActivity {
@@ -37,7 +38,10 @@ public class ViewDeckActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_deck);
 
         //get the current card
-        currentCard = selectedDeck.inOrder_v.elementAt(currentCardNO);
+        if (fromStudy == true)
+            currentCard = selectedDeck.getNextCard();
+        else
+            currentCard = selectedDeck.inOrder_v.elementAt(currentCardNO);
 
         //get the question string
         TextView questionText = (TextView) findViewById(R.id.questionText);

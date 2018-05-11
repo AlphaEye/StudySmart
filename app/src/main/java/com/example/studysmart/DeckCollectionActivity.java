@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import static com.example.studysmart.MainActivity.currentCardNO;
 import static com.example.studysmart.MainActivity.selectedDeck;
+import static com.example.studysmart.MainActivity.fromStudy;
 
 public class DeckCollectionActivity extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class DeckCollectionActivity extends AppCompatActivity {
     public void viewDeck(View view)
     {
         Intent intent = new Intent(this, ViewDeckActivity.class);
+        fromStudy = false;
         startActivity(intent);
     }
 

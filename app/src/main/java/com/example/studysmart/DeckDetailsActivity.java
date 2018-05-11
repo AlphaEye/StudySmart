@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import static com.example.studysmart.MainActivity.fromStudy;
+
 public class DeckDetailsActivity extends AppCompatActivity {
 
     @Override
@@ -33,4 +35,12 @@ public class DeckDetailsActivity extends AppCompatActivity {
                 }
         );
     }
+
+    public void toStudy(View view)
+    {
+        Intent intent = new Intent(this, ViewDeckActivity.class);
+        fromStudy = true;
+        startActivity(intent);
+    }
+
 }
