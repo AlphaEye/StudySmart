@@ -59,7 +59,8 @@ public class ViewDeckActivity extends AppCompatActivity {
         super.onActivityResult(reqCode, resultCode, data);
 
 
-        if (resultCode == RESULT_OK) {
+        if (resultCode == RESULT_OK)
+        {
             try {
                 ImageView image_view = (ImageView) findViewById(R.id.imageView);
                 final Uri imageUri = data.getData();
