@@ -27,6 +27,7 @@
         <activity android:name=".ViewDeckActivity" />
         <activity android:name=".AnswerCardActivity" />
         <activity android:name=".AddCardToCurrentDeckActivity"></activity>
+        <activity android:name = ".ViewDetailsActivity" />
     </application>
 
 </manifest>

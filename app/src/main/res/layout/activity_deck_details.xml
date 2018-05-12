@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,10 +18,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
         android:layout_below="@id/deckInfo"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/addFlashCardButton"
@@ -38,32 +38,38 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/totalTextView"
-        android:layout_width="45dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="71dp"
-        tools:textSize="24dp" />
-
-    <TextView
         android:id="@+id/percentageTextView"
-        android:layout_width="62dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="134dp"
-        android:layout_marginTop="36dp"
-        tools:textSize="24dp" />
+        android:layout_below="@+id/total"
+        android:layout_marginEnd="139dp"
+        android:gravity="left|center_vertical"
+        android:text="100%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:textSize="24sp" />
 
     <TextView
         android:id="@+id/difficultyTextView"
-        android:layout_width="140dp"
+        android:layout_width="89dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="68dp"
-        tools:textSize="36sp" />
+        android:layout_below="@+id/percentageTextView"
+        android:layout_marginStart="108dp"
+        android:gravity="bottom|left"
+        android:text="Easy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/deckInfo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="68dp"
+        android:gravity="top|center"
+        android:text="5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:textSize="24sp" />
 </RelativeLayout>
