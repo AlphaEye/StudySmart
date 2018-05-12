@@ -59,6 +59,7 @@ public class DeckDetailsActivity extends AppCompatActivity {
         studyButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
+                        fromStudy = true;
                         startActivity(new Intent(DeckDetailsActivity.this, ViewDeckActivity.class));
                     }
                 }

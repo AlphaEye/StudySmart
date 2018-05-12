@@ -19,7 +19,7 @@ public class AnswerCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_card);
 
-        if (fromStudy == false) {
+        if (fromStudy == false && selectedDeck.totalSize != 0) {
             currentCard = selectedDeck.inOrder_v.elementAt(currentCardNO);
             if (currentCardNO < selectedDeck.inOrder_v.size())
                 currentCardNO++;

@@ -41,8 +41,12 @@ public class ViewDeckActivity extends AppCompatActivity {
         //get the current card
         if (fromStudy == true)
             currentCard = selectedDeck.getNextCard();
-        else
+        else if (fromStudy == false && selectedDeck.totalSize != 0)
+        {
             currentCard = selectedDeck.inOrder_v.elementAt(currentCardNO);
+        }
+        else { currentCard = new Card("Deck is empty!", "Add cards to begin studying!"); }
+
 
         //get the question string
         TextView questionText = (TextView) findViewById(R.id.questionText);

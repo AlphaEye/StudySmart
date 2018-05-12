@@ -117,6 +117,9 @@ public class Deck {
         //We pick a random integer between 0 and 10
         //if the number is between 0 and 6 (weight 7), inclusive, take unseen card
         //if the number is between 7 and 10 (weight 3), inclusive, take difficulty-type card
+        if (totalSize == 0)
+            return new Card("Deck is empty!", "Add cards to begin studying!");
+        
         Random r = new Random();
         int low = 0;
         int high1 = 10;
@@ -124,11 +127,11 @@ public class Deck {
         //method to get a random number. produces a number between 0 and 10, inclusive
         int random = r.nextInt(high1 - low) + low;
 
-        /*if (random >= 0 && random <= 6 && unseen_v != null) {
+        if (random >= 0 && random <= 6 && unseen_v.size() != 0) {
             int tempHigh = unseen_v.size();
 
             //returns card at random index in unseen vector
-            return easy_v.get(r.nextInt(tempHigh - low) + low);
+            return unseen_v.get(r.nextInt(tempHigh - low) + low);
         }
         else
             {
@@ -159,28 +162,31 @@ public class Deck {
             int randInt = r.nextInt(high - low) + low;
 
 
-            if (randInt >= 0 && randInt <= 1 && easy_v != null) {
+            if (randInt >= 0 && randInt <= 1 && easy_v.size() != 0)
+            {
                 int tempHigh = easy_v.size();
 
                 //returns card at random index in easy vector
                 return easy_v.get(r.nextInt(tempHigh - low) + low);
             }
-            else if (randInt >= 2 && randInt <= 10 && medium_v != null)
+            else if (randInt >= 2 && randInt <= 10 && medium_v.size() != 0)
             {
                 int tempHigh = medium_v.size();
 
                 //returns card at random index in medium vector
                 return medium_v.get(r.nextInt(tempHigh - low) + low);
             }
-            else if (randInt >= 11 && randInt <= 20 && hard_v != null)
+            else if (randInt >= 11 && randInt <= 20 && hard_v.size() != 0)
             {
                 int tempHigh = hard_v.size();
                 //returns card at random index in hard vector
                 return hard_v.get(r.nextInt(tempHigh - low) + low);
             }
-        }*/
+            return new Card("No cards in deck", "Please add cards to deck to begin studying");
+            //return new Card("Not unseen", "Not unseen A");
+        }
         //return new Card();
-        int random1 = r.nextInt(3 - low) + low;
-        return unseen_v.get(random1);
+        //int random1 = r.nextInt(3 - low) + low;
+        //return unseen_v.get(random1);
     }
 }
