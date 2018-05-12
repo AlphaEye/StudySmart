@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public static Vector<Deck> deckList = new Vector<Deck>();
     //Selected deck, used to implement deck collections(AlphaEye)
     public static Deck selectedDeck;
+    //current card
+    public static Card currentCard;
     //public static final String EXTRA_MESSAGE = "com.example.StudySmart.MESSAGE"; never used
     //Actually needed for viewing cards
     public static int currentCardNO;

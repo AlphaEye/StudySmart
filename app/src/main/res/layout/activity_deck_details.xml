@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="150dp">
 
@@ -9,9 +11,9 @@
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:textSize="25sp"
-        android:text="@string/deck_info_text_view" />
+        android:layout_alignParentTop="true"
+        android:text="@string/deck_info_text_view"
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,4 +36,34 @@
             android:onClick="toStudy"
             android:text="@string/study" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="71dp"
+        tools:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/percentageTextView"
+        android:layout_width="62dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="134dp"
+        android:layout_marginTop="36dp"
+        tools:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/difficultyTextView"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="68dp"
+        tools:textSize="36sp" />
 </RelativeLayout>

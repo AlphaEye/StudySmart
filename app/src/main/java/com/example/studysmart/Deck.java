@@ -124,7 +124,7 @@ public class Deck {
         //method to get a random number. produces a number between 0 and 10, inclusive
         int random = r.nextInt(high1 - low) + low;
 
-        if (random >= 0 && random <= 6 && unseen_v != null) {
+        /*if (random >= 0 && random <= 6 && unseen_v != null) {
             int tempHigh = unseen_v.size();
 
             //returns card at random index in unseen vector
@@ -142,15 +142,15 @@ public class Deck {
             //if the number is between 2 and 10 (weight 8), inclusive, take a medium card
             //if it is between 11 and 20 (weight 10), inclusive, take an hard card
 
-            /*set the bounds for easy cards
-            int easyLow = 0;
-            int easyHigh = 1;
+            //set the bounds for easy cards
+            //int easyLow = 0;
+            //int easyHigh = 1;
             //set the bounds for medium cards
-            int mediumLow = 2;
-            int mediumHigh = 10;
+            //int mediumLow = 2;
+            //int mediumHigh = 10;
             //set the bounds for hard cards
-            int hardLow = 11;
-            int hardHigh = 20;*/
+            //int hardLow = 11;
+            //int hardHigh = 20;
 
             //bound for the random number of difficulty deck
             int high = 20;
@@ -178,7 +178,9 @@ public class Deck {
                 //returns card at random index in hard vector
                 return hard_v.get(r.nextInt(tempHigh - low) + low);
             }
-        }
-        return new Card();
+        }*/
+        //return new Card();
+        int random1 = r.nextInt(3 - low) + low;
+        return unseen_v.get(random1);
     }
 }

@@ -47,4 +47,18 @@ public class DeckCollectionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddCardToCurrentDeckActivity.class);
         startActivity(intent);
     }
+
+    public void study(View view)
+    {
+        Intent intent = new Intent(this, ViewDeckActivity.class);
+        fromStudy = true;
+        startActivity(intent);
+    }
+
+    public void viewDetails(View view)
+    {
+        //Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, DeckDetailsActivity.class);
+        startActivity(intent);
+    }
 }

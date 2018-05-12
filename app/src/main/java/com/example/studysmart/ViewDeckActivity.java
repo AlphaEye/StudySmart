@@ -25,11 +25,12 @@ import static com.example.studysmart.MainActivity.currentCardNO;
 import static com.example.studysmart.MainActivity.deckList;
 import static com.example.studysmart.MainActivity.fromStudy;
 import static com.example.studysmart.MainActivity.selectedDeck;
+import static com.example.studysmart.MainActivity.currentCard;
 
 public class ViewDeckActivity extends AppCompatActivity {
     private static int RESULT_LOAD_IMAGE = 1;
 
-    Card currentCard;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

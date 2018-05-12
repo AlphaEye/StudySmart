@@ -7,9 +7,39 @@
     tools:context=".DeckCollectionActivity">
 
     <Button
+        android:id="@+id/deckDetailsButton"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="viewDetails"
+        android:text="Deck Details"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.803" />
+
+    <Button
+        android:id="@+id/viewDeckButton"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
+        android:background="@android:color/holo_purple"
+        android:onClick="viewDeck"
+        android:text="View Deck"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659" />
+
+    <Button
         android:id="@+id/addCardButton"
         android:layout_width="213dp"
-        android:layout_height="97dp"
+        android:layout_height="47dp"
         android:background="@android:color/holo_orange_dark"
         android:onClick="addCard"
         android:text="@string/add_flashcard"
@@ -18,15 +48,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/viewDeckButton"
         android:layout_width="213dp"
-        android:layout_height="97dp"
+        android:layout_height="47dp"
         android:background="@android:color/holo_green_dark"
-        android:onClick="viewDeck"
+        android:onClick="study"
         android:text="Study"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,12 +63,12 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintVertical_bias="0.344" />
 
     <Button
         android:id="@+id/renameButton"
         android:layout_width="213dp"
-        android:layout_height="97dp"
+        android:layout_height="47dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="renameDeck"
         android:text="@string/rename_deck"
@@ -49,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintVertical_bias="0.185" />
 
     <TextView
         android:id="@+id/cardNameText"
@@ -78,4 +107,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.981" />
+
 </android.support.constraint.ConstraintLayout>

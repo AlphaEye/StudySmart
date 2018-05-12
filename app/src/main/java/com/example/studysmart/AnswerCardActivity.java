@@ -7,25 +7,34 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static com.example.studysmart.MainActivity.currentCard;
 import static com.example.studysmart.MainActivity.currentCardNO;
+import static com.example.studysmart.MainActivity.fromStudy;
 import static com.example.studysmart.MainActivity.selectedDeck;
 
 public class AnswerCardActivity extends AppCompatActivity {
 
-    Card currentCard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_card);
 
-        currentCard = selectedDeck.inOrder_v.elementAt(currentCardNO);
-        if (currentCardNO < selectedDeck.inOrder_v.size())
-            currentCardNO++;
+        if (fromStudy == false) {
+            currentCard = selectedDeck.inOrder_v.elementAt(currentCardNO);
+            if (currentCardNO < selectedDeck.inOrder_v.size())
+                currentCardNO++;
+            else
+                currentCardNO = -1;
+            //get the answer string
+            TextView answerText = (TextView) findViewById(R.id.answerText);
+            answerText.setText(currentCard.getAnswer());
+        }
         else
-            currentCardNO = -1;
-        //get the answer string
-        TextView answerText = (TextView) findViewById(R.id.answerText);
-        answerText.setText(currentCard.getAnswer());
+        {
+            //get the answer string
+            TextView answerText = (TextView) findViewById(R.id.answerText);
+            answerText.setText(currentCard.getAnswer());
+        }
     }
 
     public void returnToDeck(View view)
